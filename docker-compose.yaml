@@ -1,0 +1,21 @@
+version: '3'
+services:
+  tsts:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: jski/tsts:latest
+    restart: unless-stopped
+    container_name: TweetStreamToSlack
+    tty: true
+    environment:
+      WebhookURL:
+      Channel:
+      Username:
+      EmojiIcon:
+      ConsumerKey:
+      ConsumerSecret: 
+      AccessToken:
+      AccessTokenSecret:
+      ListOwner:
+      ListToTrack:
